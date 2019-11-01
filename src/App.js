@@ -4,7 +4,7 @@ import './App.css';
 import WithOutJSX from './components/with-out-jsx';
 import WithJSX from './components/with-jsx';
 import ParentComponent from "./components/parent";
-import MountComponent from "./components/mount-component";
+import ComponentLifeCyclesA from "./components/component-life-cycles-a";
 import StateComponent from "./components/state";
 import ApiCall from "./components/api-call";
 import RenderingLists from "./components/renderingLists";
@@ -37,7 +37,7 @@ class App extends Component {
                 {/*Class example - <ClassExample/>*/}
                 {/*state - <StateComponent/>*/}
                 {/*lists - <RenderingLists/>*/}
-                {/*MountComponent - <MountComponent/>*/}
+                 ComponentLifeCycles - <ComponentLifeCyclesA/>
                 {/*Api Call - <ApiCall/>*/}
 
             </div>
