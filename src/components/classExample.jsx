@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
-class ClassExample extends React.PureComponent {
+class ClassExample extends Component {
     render() {
         return (
             <div>

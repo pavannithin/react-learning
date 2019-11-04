@@ -4,7 +4,7 @@ import ComponentLifeCyclesB from "./component-life-cycles-b";
 class ComponentLifeCyclesA extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {counter: 0}
+        this.state = {counter: 0};
         console.log("constructor A");
     }
 
@@ -47,7 +47,7 @@ class ComponentLifeCyclesA extends React.Component {
         console.log("render A");
         return (
             <div>
-                ComponentLifeCycles rendered
+                ComponentLifeCycles A rendered
                 <ComponentLifeCyclesB/>
                 <button onClick={this.handleChanges}>OnClick({this.state.counter})</button>
             </div>

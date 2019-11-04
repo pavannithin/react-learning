@@ -30,11 +30,11 @@ class App extends Component {
                     </a>
                 </header>
 
+                {/*Class example - <ClassExample/>*/}
                 {/*Function example - <FunctionExample/>*/}
                 {/*With JSX Syntax - <WithJSX/>*/}
                 {/*With OUT JSX Syntax - <WithOutJSX/>*/}
                 {/*Props- <ParentComponent/>*/}
-                {/*Class example - <ClassExample/>*/}
                 {/*state - <StateComponent/>*/}
                 {/*lists - <RenderingLists/>*/}
                  ComponentLifeCycles - <ComponentLifeCyclesA/>

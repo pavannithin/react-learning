@@ -11,7 +11,7 @@ function ParentComponent (){
                 <p><b>Props Feature</b></p>
                 <Marvel name={"Robert Downey"} superHero={"Iron Man"}/>
                 <Marvel name={"Chris Evans"} superHero={"Captain America"}/>
-                <Marvel name={"Chris Hemsworth"} superHero={"Captain America"}/>
+                <Marvel name={"Chris Hemsworth"} superHero={"Thor"}/>
             </div>
         );
 }

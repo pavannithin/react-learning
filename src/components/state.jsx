@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
-class StateComponent extends React.PureComponent {
+class StateComponent extends Component {
 
     constructor(props) {
         super(props);
