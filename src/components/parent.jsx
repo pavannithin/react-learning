@@ -9,7 +9,7 @@ function ParentComponent (){
             <div>
 
                 <p><b>Props Feature</b></p>
-                <Marvel name={"Robert Downey"} superHero={"Iron Man"}/>
+                <Marvel name={"Robert Downey"} superHero={"Iron Man"} t={"to"}/>
                 <Marvel name={"Chris Evans"} superHero={"Captain America"}/>
                 <Marvel name={"Chris Hemsworth"} superHero={"Thor"}/>
             </div>

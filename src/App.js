@@ -10,11 +10,40 @@ import ApiCall from "./components/api-call";
 import RenderingLists from "./components/renderingLists";
 import FunctionExample from "./components/functionExample";
 import ClassExample from "./components/classExample";
+import MethodsAsPorps from "./components/MethodsAsPorps";
+import BasicReduxExample from "./components/redux/basic-redux-example";
+import {applyMiddleware, createStore} from "redux";
+import thunkMiddleware from "redux-thunk";
+import {Provider, connect} from "react-redux";
+import {basicReducer} from "./components/redux/basic-redux-example";
+
+
+/*function basicReducer(state = {
+    counter: 0,
+}, action) {
+    switch (action.type) {
+        case "INCREMENT":
+            return Object.assign({}, state, {
+                counter: state.counter + 1
+            });
+        case "DECREMENT":
+            return Object.assign({}, state, {
+                counter: state.counter - 1
+            });
+        default:
+            return state;
+    }
+};*/
+const store = createStore(basicReducer, applyMiddleware(thunkMiddleware));
 
 class App extends Component {
+
+
+    /*    */
     render() {
         return (
             <div className="App">
+                <Provider store={store}>
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo"/>
                     <p>
@@ -37,9 +66,13 @@ class App extends Component {
                 {/*Props- <ParentComponent/>*/}
                 {/*state - <StateComponent/>*/}
                 {/*lists - <RenderingLists/>*/}
-                 ComponentLifeCycles - <ComponentLifeCyclesA/>
-                {/*Api Call - <ApiCall/>*/}
 
+                {/* ComponentLifeCycles - <ComponentLifeCyclesA/>*/}
+                {/*<MethodsAsPorps/>*/}
+                {/*Api Call - <ApiCall/>*/}
+                <BasicReduxExample/>
+                {/*<FromRegistraion/>*/}
+                </Provider>
             </div>
         );
     }
