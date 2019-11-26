@@ -6,10 +6,10 @@ import ChildComponent from "./child-component";
 export function basicReducer(state = 0, action) {
     switch (action.type) {
         case "HANDLE_INCREMENT":
-            console.log("HANDLE_INCREMENT=")
+            console.log("HANDLE_INCREMENT=");
             return state + 1;
         case "HANDLE_DECREMENT":
-            console.log("HANDLE_DECREMENT=")
+            console.log("HANDLE_DECREMENT=");
             return state - 1;
         default:
             return state;
