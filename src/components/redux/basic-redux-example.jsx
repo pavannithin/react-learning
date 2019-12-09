@@ -1,20 +1,9 @@
+/*
 import React, {Component} from 'react';
 import {connect} from "react-redux";
 import ChildComponent from "./child-component";
 
 
-export function basicReducer(state = 0, action) {
-    switch (action.type) {
-        case "HANDLE_INCREMENT":
-            console.log("HANDLE_INCREMENT=");
-            return state + 1;
-        case "HANDLE_DECREMENT":
-            console.log("HANDLE_DECREMENT=");
-            return state - 1;
-        default:
-            return state;
-    }
-};
 
 
 class BasicReduxExample extends Component {
@@ -51,4 +40,6 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(BasicReduxExample);
+// export default BasicReduxExample
 
+*/
