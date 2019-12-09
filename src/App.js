@@ -18,6 +18,8 @@ import thunk from "redux-thunk";
 import {Provider, connect} from "react-redux";
 import reducers from "./components/redux/reducers/index";
 import ReduxAPIExample from "./components/redux/redux-api-example";
+import logger from 'redux-logger'
+
 
 
 /*function basicReducer(state = {
@@ -36,8 +38,7 @@ import ReduxAPIExample from "./components/redux/redux-api-example";
             return state;
     }
 };*/
-const store = createStore(reducers,applyMiddleware(thunk));
-console.log("store",store.getState());
+const store = createStore(reducers,applyMiddleware(thunk,logger));
 // const store = createStore(reducers);
 
 class App extends Component {
