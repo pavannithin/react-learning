@@ -11,11 +11,13 @@ import RenderingLists from "./components/renderingLists";
 import FunctionExample from "./components/functionExample";
 import ClassExample from "./components/classExample";
 import MethodsAsPorps from "./components/MethodsAsPorps";
-import BasicReduxExample from "./components/redux/basic-redux-example";
+// import BasicReduxExample from "./components/redux/basic-redux-example";
+import 'font-awesome/css/font-awesome.min.css';
 import {applyMiddleware, createStore} from "redux";
-import thunkMiddleware from "redux-thunk";
+import thunk from "redux-thunk";
 import {Provider, connect} from "react-redux";
-import {basicReducer} from "./components/redux/basic-redux-example";
+import reducers from "./components/redux/reducers/index";
+import ReduxAPIExample from "./components/redux/redux-api-example";
 
 
 /*function basicReducer(state = {
@@ -34,7 +36,9 @@ import {basicReducer} from "./components/redux/basic-redux-example";
             return state;
     }
 };*/
-const store = createStore(basicReducer, applyMiddleware(thunkMiddleware));
+const store = createStore(reducers,applyMiddleware(thunk));
+console.log("store",store.getState());
+// const store = createStore(reducers);
 
 class App extends Component {
 
@@ -44,34 +48,36 @@ class App extends Component {
         return (
             <div className="App">
                 <Provider store={store}>
-                <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo"/>
-                    <p>
-                        Edit <code>src/App.js</code> and save to reload.
-                    </p>
-                    <a
-                        className="App-link"
-                        href="https://reactjs.org"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Learn React
-                    </a>
-                </header>
+                   {/* <header className="App-header">
+                        <img src={logo} className="App-logo" alt="logo"/>
+                        <p>
+                            Edit <code>src/App.js</code> and save to reload.
+                        </p>
+                        <a
+                            className="App-link"
+                            href="https://reactjs.org"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Learn React
+                        </a>
+                    </header>*/}
 
-                {/*Class example - <ClassExample/>*/}
-                {/*Function example - <FunctionExample/>*/}
-                {/*With JSX Syntax - <WithJSX/>*/}
-                {/*With OUT JSX Syntax - <WithOutJSX/>*/}
-                {/*Props- <ParentComponent/>*/}
-                {/*state - <StateComponent/>*/}
-                {/*lists - <RenderingLists/>*/}
+                    {/*Class example - <ClassExample/>*/}
+                    {/*Function example - <FunctionExample/>*/}
+                    {/*With JSX Syntax - <WithJSX/>*/}
+                    {/*With OUT JSX Syntax - <WithOutJSX/>*/}
+                    {/*Props- <ParentComponent/>*/}
+                    {/*state - <StateComponent/>*/}
+                    {/*lists - <RenderingLists/>*/}
 
-                {/* ComponentLifeCycles - <ComponentLifeCyclesA/>*/}
-                {/*<MethodsAsPorps/>*/}
-                {/*Api Call - <ApiCall/>*/}
-                <BasicReduxExample/>
-                {/*<FromRegistraion/>*/}
+                    {/* ComponentLifeCycles - <ComponentLifeCyclesA/>*/}
+                    {/*<MethodsAsPorps/>*/}
+                    {/*Api Call - <ApiCall/>*/}
+                    {/*<BasicReduxExample/>*/}
+
+                    <ReduxAPIExample/>
+
                 </Provider>
             </div>
         );
