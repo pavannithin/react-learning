@@ -42,8 +42,11 @@ const store = createStore(reducers,applyMiddleware(thunk,logger));
 // const store = createStore(reducers);
 
 class App extends Component {
+const message = 'hello'
+ const [count, setCount] = useState(0);
 
-
+  const increment = () => setCount(prevCount => prevCount + 1);
+  const decrement = () => setCount(prevCount => prevCount - 1);
     /*    */
     render() {
         return (
@@ -76,7 +79,13 @@ class App extends Component {
                     {/*<MethodsAsPorps/>*/}
                     {/*Api Call - <ApiCall/>*/}
                     {/*<BasicReduxExample/>*/}
-
+                     <div>
+                          <h1>{message} from TestComponent!</h1>
+                          <p data-testid="current-count">Current Count: {count}</p>
+                          <button onClick={increment}>Increment</button>
+                          <button onClick={decrement}>Decrement</button>
+                          {count > 5 && <p>Count is greater than 5!</p>}
+                    </div>
                     <ReduxAPIExample/>
 
                 </Provider>
@@ -84,5 +93,5 @@ class App extends Component {
         );
     }
 }
-
+console.log("helloworld")
 export default App;
