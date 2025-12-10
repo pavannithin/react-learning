@@ -84,5 +84,5 @@ class App extends Component {
         );
     }
 }
-
+console.log("helloworld")
 export default App;
